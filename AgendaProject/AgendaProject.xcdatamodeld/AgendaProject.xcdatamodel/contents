@@ -9,13 +9,8 @@
         <attribute name="role" optional="YES" attributeType="String"/>
         <relationship name="groupOfElfs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="elfsInGroup" inverseEntity="Group"/>
     </entity>
-    <entity name="Present" representedClassName="Present" syncable="YES" codeGenerationType="class">
-        <attribute name="child" optional="YES" attributeType="String"/>
-        <attribute name="namePresent" optional="YES" attributeType="String"/>
-    </entity>
     <elements>
         <element name="Group" positionX="-63" positionY="0" width="128" height="59"/>
         <element name="Person" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Present" positionX="-63" positionY="0" width="128" height="59"/>
     </elements>
 </model>
