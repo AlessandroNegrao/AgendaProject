@@ -11,18 +11,18 @@ public class PersonRepository {
     static let shared = PersonRepository() // Singleton
     
     //Inicialização da unidade de persistência com o persistent container
-//        let persistentContainer: NSPersistentContainer = {
-//    
-//            let container = NSPersistentContainer(name: "AgendaProject")
-//            container.loadPersistentStores{
-//                storeDescription, error in
-//    
-//                if let foundError = error{
-//                    fatalError("Error: \(foundError)") //crasha o codigo e mostra no console (nao recomendado em etapa de desenvolvimento avançada, na loja ou afins)
-//                }
-//            }
-//            return container
-//        }()
+        let persistentContainer: NSPersistentContainer = {
+    
+            let container = NSPersistentContainer(name: "AgendaProject")
+            container.loadPersistentStores{
+                storeDescription, error in
+
+                if let foundError = error{
+                    fatalError("Error: \(foundError)") //crasha o codigo e mostra no console (nao recomendado em etapa de desenvolvimento avançada, na loja ou afins)
+                }
+            }
+            return container
+        }()
     
     // Função de criação de objeto e armazenamento no banco de dados
         func createPerson(name: String?, role: String?) -> Person?{
